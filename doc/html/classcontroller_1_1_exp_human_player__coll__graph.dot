@@ -1,0 +1,40 @@
+digraph "controller.ExpHumanPlayer"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{controller.ExpHumanPlayer\n|- text\l|+ ExpHumanPlayer()\l+ actionPerformed()\l+ play()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{controller.PlayerExp\n||+ play()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacecontroller_1_1_player_exp.html"];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{ActionListener\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -context" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{controller.PlayerContext\n||+ PlayerContext()\l+ PlayerContext()\l+ play()\l+ actionPerformed()\l# setToX()\l# setToO()\l# setCell()\l# getCell()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcontroller_1_1_player_context.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node5 -> Node4 [color="grey25",fontsize="10",style="solid",label=" -targetButton" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 [label="{view.CellButton\n|- coords\l- serialVersionUID\l|+ CellButton()\l+ getCoords()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classview_1_1_cell_button.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node6 [label="{JButton\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node5 [color="grey25",fontsize="10",style="solid",label=" -frGrnd\n-bckGrnd" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node7 [label="{Color\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node5 [color="grey25",fontsize="10",style="solid",label=" -size" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node8 [label="{Dimension\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node4 [color="grey25",fontsize="10",style="solid",label=" -player\n-player1\n-player2" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node9 -> Node4 [color="grey25",fontsize="10",style="solid",label=" -view" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node9 [label="{view.GameWindow\n|~ locY\l- serialVersionUID\l- title\l- locX\l|+ GameWindow()\l+ attachController()\l+ enableHumanBoard()\l+ disableHumanBoard()\l+ setButton()\l- frameProperties()\l- frameComponents()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classview_1_1_game_window.html"];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node10 [label="{JFrame\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node9 [color="grey25",fontsize="10",style="solid",label=" -board" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node11 [label="{view.BoardPanel\n|- serialVersionUID\l|+ BoardPanel()\l+ attachController()\l+ setButton()\l+ removeButtonListenersExperimental()\l+ addbuttonListenersExperimental()\l- defineButtons()\l- addButtons()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classview_1_1_board_panel.html"];
+  Node12 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node12 [label="{JPanel\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node11 [color="grey25",fontsize="10",style="solid",label=" -buttons\n~bottomLeft\n-middleRight\n~bottomRight\n~bottomCenter\n~middleCenter\n~topCenter\n~topRight\n-topLeft\n~middleLeft\n..." ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 -> Node11 [color="grey25",fontsize="10",style="solid",label=" -controller" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node9 -> Node11 [color="grey25",fontsize="10",style="solid",label=" -window" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node7 -> Node11 [color="grey25",fontsize="10",style="solid",label=" -black" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node7 -> Node9 [color="grey25",fontsize="10",style="solid",label=" -black" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node13 -> Node4 [color="grey25",fontsize="10",style="solid",label=" -board" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node13 [label="{testModel.testBoard\n|- board\l|+ setCell()\l+ getCell()\l+ getBoard()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtest_model_1_1test_board.html"];
+  Node9 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -view" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node13 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -model" ,arrowhead="odiamond",fontname="Helvetica"];
+}

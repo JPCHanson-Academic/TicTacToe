@@ -1,0 +1,12 @@
+digraph "controller.PlayerExp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{controller.PlayerExp\n||+ play()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{controller.ExpCPUPlayer\n|- text\l- context\l- view\l- model\l|+ ExpCPUPlayer()\l+ actionPerformed()\l+ play()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcontroller_1_1_exp_c_p_u_player.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{controller.ExpHumanPlayer\n|- text\l- context\l- view\l- model\l|+ ExpHumanPlayer()\l+ actionPerformed()\l+ play()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcontroller_1_1_exp_human_player.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{controller.PlayerContext\n|- targetButton\l- view\l- player\l- player1\l- player2\l- board\l|+ PlayerContext()\l+ PlayerContext()\l+ play()\l+ actionPerformed()\l# setToX()\l# setToO()\l# setCell()\l# getCell()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcontroller_1_1_player_context.html"];
+}
